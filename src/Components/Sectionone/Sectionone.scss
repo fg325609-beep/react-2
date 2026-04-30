@@ -1,0 +1,45 @@
+section{
+    .container{
+        .two{
+            padding-top: 100px;
+            .title{
+                span{
+                    width: 30%;
+                    height: 3px;
+                    background: black;
+                }
+                h1{
+                    font-family: DM Serif Display;
+                    font-weight: 400;
+                    font-size: 72px;
+                    line-height: 64px;
+                    letter-spacing: -1px;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+.card {
+    img {
+        width: 80px; 
+        height: 80px;
+        margin-bottom: 30px;
+        background-color: #95a9cd;
+        border-radius: 50%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        color: #837d87;
+        line-height: 1.6;
+    }
+}
