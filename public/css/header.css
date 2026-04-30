@@ -6,6 +6,13 @@
   text-decoration: none;
 }
 
+.contaier {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 header .contaier .navbar {
   display: flex;
   align-items: center;
