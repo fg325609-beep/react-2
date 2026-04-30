@@ -1,7 +1,7 @@
 import "./Header.scss"; 
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid- Moore-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (

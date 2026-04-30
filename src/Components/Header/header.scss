@@ -101,7 +101,6 @@ header {
   justify-content: space-between;
   padding: 20px 0;
 
-  // Burger tugmasi (Kompyuterda yashirin)
   .menu-toggle {
     display: none;
     background: none;
@@ -117,19 +116,17 @@ header {
     gap: 20px;
     list-style: none;
 
-    // ... (sizning mavjud a va .nav-a stillaringiz shu yerda qoladi)
   }
 
-  // RESPONSIV QISM (Mobil telefonlar uchun)
   @media (max-width: 768px) {
     .menu-toggle {
-      display: block; // Burger tugmasi ko'rinadi
+      display: block; 
     }
 
     .nav-menu {
       position: fixed;
       top: 0;
-      right: -100%; // Menyuni ekrandan tashqarida saqlash
+      right: -100%; 
       width: 100%;
       height: 100vh;
       background-color: white;
@@ -139,7 +136,7 @@ header {
       z-index: 99;
 
       &.active {
-        right: 0; // Menyu ochilganda ekranga keladi
+        right: 0; 
       }
 
       li {
@@ -147,7 +144,7 @@ header {
         text-align: center;
         
         a {
-          font-size: 20px; // Mobil uchun kattaroq matn
+          font-size: 20px; 
           display: block;
           padding: 15px 0;
         }
@@ -155,3 +152,4 @@ header {
     }
   }
 }
+
