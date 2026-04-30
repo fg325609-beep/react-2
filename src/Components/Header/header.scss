@@ -6,19 +6,92 @@
     text-decoration: none;
 
 }
-.container{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-header{
-    .container{
-        .navbar{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+
+header {
+  .container {
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        list-style: none; 
+
+        a {
+          color: black;
+          font-family: "Karla", sans-serif;
+          font-weight: 700;
+          font-size: 13px;
+          text-decoration: none;
+          list-style: none;
+          position: relative; 
+          transition: 0.3s;
+
+          &:hover {
+            color: #555; 
+            
+            
+            &::after {
+              width: 100%; 
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: black;
+            transition: 0.3s ease-in-out;
+            
+          }
+
+          &::before {
+            content: "•";
+            position: absolute;
+            left: -12px;
+            opacity: 0;
+            transition: 0.3s;
+            
+          }
+
+          &:hover::before {
+            opacity: 1;
+            
+          }
         }
+
+        .nav-a {
+          padding: 10px 24px;
+          border: 1.5px solid black;
+          text-transform: uppercase;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: black;
+            color: white;
+            
+          }
+          
+          &::after, &::before {
+            display: none; 
+            text-decoration: none;
+            list-style: none;
+          }
+        }
+      }
     }
+  }
 }

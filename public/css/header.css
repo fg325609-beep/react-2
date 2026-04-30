@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -17,4 +18,62 @@ header .container .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 0;
+}
+header .container .navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+header .container .navbar ul a {
+  color: black;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+  transition: 0.3s;
+}
+header .container .navbar ul a:hover {
+  color: #555;
+}
+header .container .navbar ul a:hover::after {
+  width: 100%;
+}
+header .container .navbar ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: 0.3s ease-in-out;
+}
+header .container .navbar ul a::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  opacity: 0;
+  transition: 0.3s;
+}
+header .container .navbar ul a:hover::before {
+  opacity: 1;
+}
+header .container .navbar ul .nav-a {
+  padding: 10px 24px;
+  border: 1.5px solid black;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+header .container .navbar ul .nav-a:hover {
+  background-color: black;
+  color: white;
+}
+header .container .navbar ul .nav-a::after, header .container .navbar ul .nav-a::before {
+  display: none;
+  text-decoration: none;
+  list-style: none;
 }
