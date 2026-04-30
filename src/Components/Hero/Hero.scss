@@ -1,148 +1,193 @@
-section{
-    .container{
-        .hero{
-            background: rgba(45, 38, 65, 1);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
 
-            .left{
-                width: 45%;
-display: flex;
-flex-direction: column;
-align-items: start;
-padding: 0 40px;
-gap: 40px;
-h1{
-    font-family: DM Serif Display;
-     font-weight: 400;
-     font-size: 72px;
-     line-height: 64px;
-     letter-spacing: -1px;
-     color: rgba(255, 255, 255, 1);
-     
+.hero-section {
+  background: #2d2641;
+  overflow: visible;
 }
-p{
-    font-family: Karla;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0px;
-     color: rgba(255, 255, 255, 1);
 
-    
-}
-a {
-  display: inline-block;
-  padding: 12px 28px;
-  color: black;
-  font-family: "Karla", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-     color: rgba(255, 255, 255, 1);
-     border: 1px solid rgba(255, 255, 255, 1);
-
-  
-  border-radius: 4px; 
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 560px;
   position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px); 
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%; 
-    height: 100%;
-    background-color: black;
-    z-index: -1; 
-    transition: all 0.4s ease;
-  }
-
-  &:hover::after {
-    width: 100%; 
-  }
-
-  
-  &::before {
-    content: "→"; 
-    position: absolute;
-    right: 10px;
-    opacity: 0;
-    transition: 0.3s;
-  }
-
-  &:hover::before {
-    opacity: 1;
-    right: 5px;
-  }
 }
-span{
-    width: 30%;
-    background: white;
-    height: 3px;
-}
-            }
-            .right{
-                width: 45%;
-                img{
-                    width: 100%;
-                    transform: translate( -100px ,100px);
-                }
-            }
-        }
+
+.hero-left {
+  width: 50%;
+  position: relative;
+  padding: 80px 0;
+
+  .circles {
+    position: absolute;
+    bottom: -60px;
+    left: -80px;
+    width: 220px;
+    height: 220px;
+    pointer-events: none;
+    z-index: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
     }
-}
-@media (max-width: 718px) {
-  section {
-    .container {
-      .hero {
-        flex-direction: column-reverse; 
-        gap: 40px; 
-        text-align: center; 
+  }
 
-        .left {
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    .line {
+      display: block;
+      width: 140px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      font-size: 68px;
+      line-height: 1.0;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+
+    p {
+      font-family: "Karla", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 420px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 14px 32px;
+      font-family: "Karla", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      border: 1.5px solid #ffffff;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.15);
+        z-index: -1;
+        transition: width 0.4s ease;
+      }
+
+      &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+
+        &::after {
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center; 
-
-          h1 {
-            font-size: 40px; 
-            line-height: 1.1;
-          }
-
-          span {
-            margin: 0 auto 20px; 
-          }
-        }
-
-        .right {
-            width: 100%;
-            
-            img {
-              transform: translate(0,0);
-            width: 100%;
-            height: auto;
-          }
         }
       }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.hero-right {
+  width: 46%;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transform: translateY(80px);
+  }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero-right img {
+    height: 460px;
+    transform: translateY(60px);
+  }
+
+  .hero-left .hero-content h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 718px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    padding: 0;
+    min-height: unset;
+  }
+
+  .hero-left {
+    width: 100%;
+    padding: 48px 24px 60px;
+
+    .circles {
+      bottom: -40px;
+      left: -40px;
+      width: 160px;
+      height: 160px;
+    }
+
+    .hero-content {
+      align-items: center;
+      text-align: center;
+
+      .line {
+        width: 80px;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .hero-right {
+    width: 100%;
+    align-self: auto;
+
+    img {
+      width: 100%;
+      height: 320px;
+      transform: translateY(0);
+      object-position: center 20%;
     }
   }
 }
