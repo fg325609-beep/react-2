@@ -6,14 +6,14 @@
   text-decoration: none;
 }
 
-.contaier {
+.container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-header .contaier .navbar {
+header .container .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
