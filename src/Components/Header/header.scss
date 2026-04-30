@@ -95,3 +95,63 @@ header {
     }
   }
 }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  // Burger tugmasi (Kompyuterda yashirin)
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+
+    // ... (sizning mavjud a va .nav-a stillaringiz shu yerda qoladi)
+  }
+
+  // RESPONSIV QISM (Mobil telefonlar uchun)
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; // Burger tugmasi ko'rinadi
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%; // Menyuni ekrandan tashqarida saqlash
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.4s ease-in-out;
+      z-index: 99;
+
+      &.active {
+        right: 0; // Menyu ochilganda ekranga keladi
+      }
+
+      li {
+        width: 100%;
+        text-align: center;
+        
+        a {
+          font-size: 20px; // Mobil uchun kattaroq matn
+          display: block;
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}

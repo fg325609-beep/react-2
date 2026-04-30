@@ -3,6 +3,7 @@ section .container .hero {
   background: rgb(45, 38, 65);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 section .container .hero .left {
   width: 45%;
@@ -16,7 +17,6 @@ section .container .hero .left h1 {
   font-family: DM Serif Display;
   font-weight: 400;
   font-size: 72px;
-  leading-trim: NONE;
   line-height: 64px;
   letter-spacing: -1px;
   color: rgb(255, 255, 255);
@@ -91,4 +91,5 @@ section .container .hero .right {
 }
 section .container .hero .right img {
   width: 100%;
+  transform: translate(-100px, 100px);
 }

@@ -4,6 +4,7 @@ section{
             background: rgba(45, 38, 65, 1);
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
             .left{
                 width: 45%;
@@ -78,7 +79,7 @@ a {
     width: 100%; 
   }
 
-  /
+  
   &::before {
     content: "→"; 
     position: absolute;
@@ -102,6 +103,7 @@ span{
                 width: 45%;
                 img{
                     width: 100%;
+                    transform: translate( -100px ,100px);
                 }
             }
         }
