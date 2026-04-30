@@ -1,0 +1,16 @@
+section .container .hero {
+  background: rgb(45, 38, 65);
+  display: flex;
+}
+section .container .hero .left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+section .container .hero .right {
+  width: 45%;
+}
+section .container .hero .right img {
+  width: 100%;
+}
