@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "./Components/Header/Header";
 import Hero from "./Hero/Hero";
 import Sectionone from "./Components/Sectionone/Sectionone"; 
